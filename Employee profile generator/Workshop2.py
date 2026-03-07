@@ -16,4 +16,10 @@ employee_card = f'Employee: {full_name} | Age: {employee_age} | Position: {posit
 print(employee_card)
 employee_code = 'DEV-2026-JD-001'
 department = employee_code[0:3]
-print(department) 
+print(department)
+year_code = employee_code[4:8]
+print(year_code)
+initials = employee_code[9:11]
+print(initials)
+last_three = employee_code[-3:]
+print(last_three)
