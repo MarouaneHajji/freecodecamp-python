@@ -31,8 +31,6 @@ medical_records = [
         'medications': ['Ibuprofen', 'Physical Therapy'],
         'last_visit_id': 'V2304',
     },
-    'bug :)',
-    42
 ]
 
 def validate(data):
@@ -43,6 +41,7 @@ def validate(data):
         return False
         
     is_invalid = False
+    key_set = set(['patient_id', 'age', 'gender', 'diagnosis', 'medications', 'last_visit_id'])
 
     for index, dictionary in enumerate(data):
         if not isinstance(dictionary, dict):
