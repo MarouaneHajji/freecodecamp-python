@@ -60,11 +60,19 @@ def validate(data):
         if not isinstance(dictionary, dict):
             print(f'Invalid format: expected a dictionary at position {index}.')
             is_invalid = True
+            continue
 
         if set(dictionary.keys()) != key_set:
             print(f'Invalid format: {dictionary} at position {index} has missing and/or invalid keys.')
             is_invalid = True
+            continue
+
+        invalid_records = find_invalid_records(**dictionary)
             
+        for key in invalid_records:
+            print(f"Unexpected format '{key}: {dictionary[key]}' at position {index}.")
+            is_invalid = True    
+
     if is_invalid:
         return False
     print('Valid format.')
