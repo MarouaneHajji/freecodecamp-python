@@ -30,7 +30,9 @@ medical_records = [
         'diagnosis': 'Chronic Back Pain',
         'medications': ['Ibuprofen', 'Physical Therapy'],
         'last_visit_id': 'V2304',
-    }
+    },
+    'bug :)',
+    42
 ]
 
 def validate(data):
