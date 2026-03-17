@@ -33,6 +33,12 @@ medical_records = [
     },
 ]
 
+def find_invalid_records(patient_id, age, gender, diagnosis, medications, last_visit_id):
+    constraints = {
+       'patient_id': isinstance(patient_id, str) 
+    }
+    return constraints
+
 def validate(data):
     is_sequence = isinstance(data, (list, tuple))
 
@@ -58,3 +64,4 @@ def validate(data):
     return True
 
 validate(medical_records)
+print(find_invalid_records(**medical_records[0]))
